@@ -42,31 +42,34 @@
 
     <style>
         :root {
-            --primary-color: #511832;
-            --accent-color: #e03268;
+            /* Palette Extracted Directly From Labelbyashee Logo */
+            --brand-green: #1E5E3A;
+            --brand-terracotta: #B3543A;
+            --brand-mint-bg: #E8F6F0;
+            --brand-yellow-bg: #FFFDF0;
             --whatsapp-color: #25D366;
-            --instagram-color: #E1306C;
-            --maps-color: #4285F4;
-            --bg-color: #FAF6F3;
-            --text-color: #2D2D2D;
+            --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            --maps-color: #38761D;
             --card-bg: #FFFFFF;
+            --text-main: #2C3E35;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', 'Segoe UI', serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            /* Soft pastel gradient inspired by logo brushstrokes */
+            background: linear-gradient(135deg, var(--brand-mint-bg) 0%, var(--brand-yellow-bg) 100%);
+            color: var(--text-main);
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            padding: 20px 20px 80px 20px;
+            padding: 24px 20px 80px 20px;
         }
 
         .container {
@@ -81,9 +84,10 @@
         .profile-card {
             background-color: var(--card-bg);
             width: 100%;
-            padding: 24px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 28px 24px;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(30, 94, 58, 0.08);
+            border: 1px solid rgba(30, 94, 58, 0.12);
             text-align: center;
         }
 
@@ -93,13 +97,16 @@
         }
 
         .logo-image {
-            width: 110px;
-            height: 110px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 16px auto;
-            border: 2px solid var(--primary-color);
-            transition: transform 0.2s ease;
+            border: 2px solid var(--brand-green);
+            padding: 4px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease;
         }
 
         .logo-image:hover {
@@ -107,31 +114,36 @@
         }
 
         h1 {
-            font-size: 22px;
-            color: var(--primary-color);
-            margin-bottom: 6px;
+            font-size: 26px;
+            color: var(--brand-green);
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            font-weight: 700;
         }
 
         p.subtitle {
             font-size: 14px;
-            color: #666;
+            color: #556B60;
+            font-family: 'Segoe UI', sans-serif;
             margin-bottom: 20px;
         }
 
         .location-info {
             font-size: 13px;
-            color: #555;
-            background: #F2ECE8;
-            padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            line-height: 1.4;
+            color: #3A4E44;
+            font-family: 'Segoe UI', sans-serif;
+            background: #F2F9F5;
+            border: 1px solid rgba(30, 94, 58, 0.15);
+            padding: 12px 16px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
         .links-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
             width: 100%;
         }
 
@@ -142,36 +154,36 @@
             gap: 10px;
             color: white;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 15px 20px;
             border-radius: 30px;
             font-weight: 600;
             font-size: 15px;
-            transition: transform 0.2s ease, opacity 0.2s ease;
+            font-family: 'Segoe UI', sans-serif;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .btn:hover {
             transform: translateY(-2px);
-            opacity: 0.95;
         }
 
         .btn-meesho {
-            background-color: var(--accent-color);
-            box-shadow: 0 4px 12px rgba(224, 50, 104, 0.3);
+            background-color: var(--brand-terracotta);
+            box-shadow: 0 4px 14px rgba(179, 84, 58, 0.3);
         }
 
         .btn-maps {
-            background-color: var(--maps-color);
-            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+            background-color: var(--brand-green);
+            box-shadow: 0 4px 14px rgba(30, 94, 58, 0.25);
         }
 
         .btn-whatsapp {
             background-color: var(--whatsapp-color);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
         }
 
         .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
+            background: var(--instagram-gradient);
+            box-shadow: 0 4px 14px rgba(225, 48, 108, 0.3);
         }
 
         .categories {
@@ -179,17 +191,19 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
+            font-family: 'Segoe UI', sans-serif;
         }
 
         .cat-card {
             background: var(--card-bg);
             padding: 16px;
-            border-radius: 12px;
+            border-radius: 14px;
             text-align: center;
             font-size: 14px;
             font-weight: 600;
-            color: var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            color: var(--brand-green);
+            border: 1px solid rgba(30, 94, 58, 0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
 
         /* Floating Quick WhatsApp Button */
@@ -205,7 +219,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
             text-decoration: none;
             font-size: 24px;
             z-index: 1000;
@@ -217,9 +231,10 @@
         }
 
         footer {
-            margin-top: 20px;
+            margin-top: 24px;
             font-size: 12px;
-            color: #888;
+            font-family: 'Segoe UI', sans-serif;
+            color: #6B7C73;
         }
     </style>
 </head>
