@@ -3,301 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Label by Ashee | Ethnic & Festive Wear</title>
-
-    <!-- ========================================================= -->
-    <!-- 1. GOOGLE ANALYTICS 4 (GA4) INTEGRATION                   -->
-    <!-- Replace 'G-XXXXXXXXXX' with your actual GA4 Measurement ID -->
-    <!-- ========================================================= -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-    <!-- ========================================================= -->
-    <!-- 2. META PIXEL (FACEBOOK/INSTAGRAM ADS PIXEL)             -->
-    <!-- Replace 'YOUR_PIXEL_ID' with your actual Meta Pixel ID    -->
-    <!-- ========================================================= -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      
-      fbq('init', 'YOUR_PIXEL_ID');
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-           src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
-    </noscript>
-
+    <title>labelbyashee | Ethnic & Festive Wear</title>
     <style>
-        :root {
-            --primary-color: #511832;
-            --accent-color: #e03268;
-            --whatsapp-color: #25D366;
-            --instagram-color: #E1306C;
-            --maps-color: #4285F4;
-            --bg-color: #FAF6F3;
-            --text-color: #2D2D2D;
-            --card-bg: #FFFFFF;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px 20px 80px 20px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 480px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .profile-card {
-            background-color: var(--card-bg);
-            width: 100%;
-            padding: 24px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-
-        .avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 32px;
-            font-weight: bold;
-            margin: 0 auto 16px auto;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-
-        h1 {
-            font-size: 22px;
-            color: var(--primary-color);
-            margin-bottom: 6px;
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
         }
-
-        p.subtitle {
-            font-size: 14px;
-            color: #666;
+        .logo-link {
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .logo-image {
+            width: 100px; /* Adjust size as needed */
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #511832;
             margin-bottom: 20px;
         }
-
-        .links-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            width: 100%;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            color: white;
-            text-decoration: none;
-            padding: 14px 20px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: transform 0.2s ease, opacity 0.2s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            opacity: 0.95;
-        }
-
-        .btn-meesho {
-            background-color: var(--accent-color);
-            box-shadow: 0 4px 12px rgba(224, 50, 104, 0.3);
-        }
-
-        .btn-whatsapp {
-            background-color: var(--whatsapp-color);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            box-shadow: 0 4px 12px rgba(225, 48, 108, 0.3);
-        }
-
-        .btn-maps {
-            background-color: var(--maps-color);
-            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
-        }
-
-        .btn-outline-maps {
-            background-color: transparent;
-            color: var(--primary-color);
-            border: 2px solid var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        .location-info {
-            font-size: 13px;
-            color: #555;
-            background: #F2ECE8;
-            padding: 12px;
-            border-radius: 12px;
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .categories {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .cat-card {
-            background: var(--card-bg);
-            padding: 16px;
-            border-radius: 12px;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-
-        /* Floating Quick WhatsApp Button */
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--whatsapp-color);
-            color: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            text-decoration: none;
+        h1 {
+            color: #511832;
             font-size: 24px;
-            z-index: 1000;
-            transition: transform 0.2s ease;
+            margin-bottom: 5px;
         }
-
-        .floating-whatsapp:hover {
-            transform: scale(1.08);
+        .subtitle {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 30px;
         }
-
-        footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
         }
+        .button:hover {
+            opacity: 0.9;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        .meesho { background-color: #cf235f; }
+        .maps { background-color: #3b82f6; }
+        .whatsapp { background-color: #10b981; }
+        .instagram { background-color: #be1259; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-card">
-            <div class="avatar">L</div>
-            <h1>Label by Ashee</h1>
-            <p class="subtitle">Premium Kurtis, Co-Ord Sets & Ethnic Wear</p>
+        <!-- Clickable Logo -->
+        <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="logo-link">
+            <!-- Ensure your logo image is saved as 'labelbyashee_logo.png' in the same folder -->
+            <img src="labelbyashee_logo.png" alt="labelbyashee Logo" class="logo-image">
+        </a>
 
-            <!-- Store Location Address Snippet -->
-            <div class="location-info">
-                📍 <strong>Store Location:</strong><br>
-                C-103, 1st Floor, City Centre 1, Near Idgah Circle, Prem Darwaza, Dariyapur, Ahmedabad - 380016
-            </div>
+        <h1>labelbyashee</h1>
+        <p class="subtitle">Premium Kurtis, Co-Ord Sets & Ethnic Wear</p>
 
-            <div class="links-group">
-                <!-- Meesho Store Button -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn btn-meesho" onclick="trackClick('Meesho Store', 'Catalog Link')">
-                    <span>🛍️ Shop Catalog on Meesho</span>
-                </a>
-
-                <!-- Google Maps Location Button -->
-                <a href="https://www.google.com/maps/place/LABEL+BY+ASHEE+-+ANSH+MANUFACTURERS/@23.038499,72.5945678,17z/data=!3m1!4b1!4m6!3m5!1s0x395e85995eee03af:0x110a452e379d03d3!8m2!3d23.0384941!4d72.5971427!16s%2Fg%2F11n_xx7pdr?entry=ttu" target="_blank" class="btn btn-maps" onclick="trackClick('Google Maps', 'View Location')">
-                    <span>📍 Visit Store on Google Maps</span>
-                </a>
-
-                <!-- Direct Turn-by-Turn Navigation Button -->
-                <a href="https://www.google.com/maps/dir/?api=1&destination=LABEL+BY+ASHEE+-+ANSH+MANUFACTURERS&destination_place_id=ChIJrwPuXpmFXjkR0wOdNy5FChE" target="_blank" class="btn btn-outline-maps" onclick="trackClick('Google Maps', 'Get Directions')">
-                    <span>🚗 Get Directions to Store</span>
-                </a>
-
-                <!-- WhatsApp Chat Button -->
-                <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20Label%20by%20Ashee%20collection." target="_blank" class="btn btn-whatsapp" onclick="trackClick('WhatsApp Chat', 'Direct Contact')">
-                    <span>💬 Chat on WhatsApp</span>
-                </a>
-
-                <!-- Instagram Profile Button -->
-                <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="btn btn-instagram" onclick="trackClick('Instagram Profile', 'Social Follow')">
-                    <span>📸 Follow on Instagram (@labelbyashee)</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="categories">
-            <div class="cat-card">✨ Festive Kurtis</div>
-            <div class="cat-card">💃 Trendy Co-Ords</div>
-            <div class="cat-card">🌸 Daily Cotton Wear</div>
-            <div class="cat-card">🚚 Free Delivery</div>
-        </div>
+        <a href="#" class="button meesho">
+            <span class="icon">🛍️</span> Shop Catalog on Meesho
+        </a>
+        <a href="#" class="button maps">
+            <span class="icon">📍</span> Visit Store on Google Maps
+        </a>
+        <a href="#" class="button whatsapp">
+            <span class="icon">💬</span> Chat on WhatsApp
+        </a>
+        <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="button instagram">
+            <span class="icon">📷</span> Follow on Instagram (@labelbyashee)
+        </a>
     </div>
-
-    <!-- Floating WhatsApp Quick-Action Badge -->
-    <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20Label%20by%20Ashee%20collection." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" onclick="trackClick('WhatsApp Floating', 'Quick Chat')">
-        💬
-    </a>
-
-    <footer>
-        © Label by Ashee • Official Storefront Link
-    </footer>
-
-    <!-- Helper function to push event data to GA4 and Meta Pixel on link click -->
-    <script>
-      function trackClick(channelName, label) {
-        if (typeof gtag === 'function') {
-          gtag('event', 'click', {
-            'event_category': 'Outbound Link',
-            'event_label': channelName + ' - ' + label
-          });
-        }
-        if (typeof fbq === 'function') {
-          fbq('trackCustom', 'OutboundClick', { target: channelName, action: label });
-        }
-      }
-    </script>
 
 </body>
 </html>
