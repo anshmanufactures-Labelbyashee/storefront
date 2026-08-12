@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>labelbyashee | Ethnic & Festive Wear</title>
+    <title>labelbyashee | Ethnic & Festive Wear Store</title>
 
-    <!-- ========================================================= -->
-    <!-- 1. GOOGLE ANALYTICS 4 (GA4) INTEGRATION                   -->
-    <!-- Replace 'G-XXXXXXXXXX' with your actual GA4 Measurement ID -->
-    <!-- ========================================================= -->
+    <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XXXXXXXXXX');
     </script>
 
-    <!-- ========================================================= -->
-    <!-- 2. META PIXEL (FACEBOOK/INSTAGRAM ADS PIXEL)             -->
-    <!-- Replace 'YOUR_PIXEL_ID' with your actual Meta Pixel ID    -->
-    <!-- ========================================================= -->
+    <!-- Meta Pixel -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -43,254 +36,331 @@
     <style>
         :root {
             --brand-green: #1E5E3A;
+            --brand-dark-green: #144228;
             --brand-terracotta: #B3543A;
-            --brand-mint-bg: #E8F6F0;
-            --brand-yellow-bg: #FFFDF0;
+            --brand-mint-bg: #F4F9F6;
+            --brand-cream: #FFFDF0;
+            --text-dark: #2C3E35;
+            --text-muted: #556B60;
+            --white: #FFFFFF;
             --whatsapp-color: #25D366;
-            --instagram-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            --maps-color: #38761D;
-            --card-bg: #FFFFFF;
-            --text-main: #2C3E35;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Georgia', 'Segoe UI', serif;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, var(--brand-mint-bg) 0%, var(--brand-yellow-bg) 100%);
-            color: var(--text-main);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 24px 20px 80px 20px;
+            background-color: var(--brand-mint-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        .container {
-            width: 100%;
-            max-width: 480px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .profile-card {
-            background-color: var(--card-bg);
-            width: 100%;
-            padding: 28px 24px;
-            border-radius: 24px;
-            box-shadow: 0 8px 24px rgba(30, 94, 58, 0.08);
-            border: 1px solid rgba(30, 94, 58, 0.12);
-            text-align: center;
-        }
-
-        .logo-link {
+        a {
             text-decoration: none;
-            display: inline-block;
+            color: inherit;
         }
 
-        .logo-image {
-            width: 130px;
-            height: 130px;
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background-color: var(--brand-terracotta);
+            color: var(--white);
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+        }
+
+        .brand-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 16px auto;
             border: 2px solid var(--brand-green);
-            padding: 4px;
-            background-color: #FFFFFF;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            transition: transform 0.25s ease;
         }
 
-        .logo-image:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            font-size: 26px;
+        .brand-title {
+            font-family: 'Georgia', serif;
+            font-size: 22px;
+            font-weight: bold;
             color: var(--brand-green);
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-            font-weight: 700;
         }
 
-        p.subtitle {
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
             font-size: 14px;
-            color: #556B60;
-            font-family: 'Segoe UI', sans-serif;
-            margin-bottom: 20px;
-        }
-
-        .location-info {
-            font-size: 13px;
-            color: #3A4E44;
-            font-family: 'Segoe UI', sans-serif;
-            background: #F2F9F5;
-            border: 1px solid rgba(30, 94, 58, 0.15);
-            padding: 12px 16px;
-            border-radius: 14px;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .links-group {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            width: 100%;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            border-radius: 30px;
             font-weight: 600;
-            font-size: 15px;
-            font-family: 'Segoe UI', sans-serif;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            color: var(--text-dark);
+            transition: color 0.2s;
         }
 
-        .btn:hover {
+        nav a:hover {
+            color: var(--brand-terracotta);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn-green {
+            background-color: var(--brand-green);
+            color: var(--white);
+        }
+
+        .nav-btn-terracotta {
+            background-color: var(--brand-terracotta);
+            color: var(--white);
+        }
+
+        /* Hero Banner Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 94, 58, 0.08) 0%, rgba(179, 84, 58, 0.08) 100%), #FFFFFF;
+            padding: 60px 24px;
+            text-align: center;
+            border-bottom: 1px solid rgba(30, 94, 58, 0.1);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-size: 38px;
+            color: var(--brand-green);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn-large:hover {
             transform: translateY(-2px);
         }
 
-        .btn-meesho {
-            background-color: var(--brand-terracotta);
-            box-shadow: 0 4px 14px rgba(179, 84, 58, 0.3);
+        /* Main Content Layout */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 24px;
         }
 
-        .btn-maps {
-            background-color: var(--brand-green);
-            box-shadow: 0 4px 14px rgba(30, 94, 58, 0.25);
-        }
-
-        .btn-whatsapp {
-            background-color: var(--whatsapp-color);
-            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-instagram {
-            background: var(--instagram-gradient);
-            box-shadow: 0 4px 14px rgba(225, 48, 108, 0.3);
-        }
-
-        /* Featured Products Section */
-        .products-section {
-            width: 100%;
-            background-color: var(--card-bg);
-            padding: 24px 20px;
-            border-radius: 24px;
-            box-shadow: 0 8px 24px rgba(30, 94, 58, 0.08);
-            border: 1px solid rgba(30, 94, 58, 0.12);
-        }
-
-        .section-title {
-            font-size: 18px;
-            color: var(--brand-green);
-            margin-bottom: 16px;
+        .section-header {
             text-align: center;
-            font-weight: bold;
+            margin-bottom: 32px;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .product-card {
-            display: flex;
-            flex-direction: column;
-            background: #FAFAFA;
-            border-radius: 16px;
-            border: 1px solid rgba(30, 94, 58, 0.1);
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background-color: #EEE;
-        }
-
-        .product-details {
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .product-title {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-main);
-            margin-bottom: 6px;
-            line-height: 1.3;
-        }
-
-        .product-price {
-            font-size: 14px;
-            font-weight: bold;
-            color: var(--brand-terracotta);
-            margin-top: auto;
+        .section-header h2 {
+            font-family: 'Georgia', serif;
+            font-size: 28px;
+            color: var(--brand-green);
             margin-bottom: 8px;
         }
 
-        .buy-now-btn {
-            background-color: var(--brand-green);
-            color: white;
-            text-align: center;
-            padding: 8px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .categories {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .cat-card {
-            background: var(--card-bg);
-            padding: 16px;
-            border-radius: 14px;
-            text-align: center;
+        .section-header p {
+            color: var(--text-muted);
             font-size: 14px;
+        }
+
+        /* Categories Bar */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(30, 94, 58, 0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             font-weight: 600;
             color: var(--brand-green);
-            border: 1px solid rgba(30, 94, 58, 0.1);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            font-size: 16px;
         }
 
-        /* Floating Quick WhatsApp Button */
+        /* Product Showcase Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(30, 94, 58, 0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 320px;
+            background-color: #EFEFEF;
+            position: relative;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--brand-terracotta);
+            color: var(--white);
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .product-info {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--brand-terracotta);
+            margin-bottom: 16px;
+            margin-top: auto;
+        }
+
+        .btn-buy {
+            background-color: var(--brand-green);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: block;
+        }
+
+        /* Store Location & Info Box */
+        .info-banner {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid rgba(30, 94, 58, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .info-text h3 {
+            font-family: 'Georgia', serif;
+            color: var(--brand-green);
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .info-text p {
+            color: var(--text-muted);
+            font-size: 14px;
+            max-width: 600px;
+        }
+
+        /* Floating WhatsApp Button */
         .floating-whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            right: 24px;
             background-color: var(--whatsapp-color);
             color: white;
             width: 56px;
@@ -300,135 +370,239 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            text-decoration: none;
-            font-size: 24px;
+            font-size: 26px;
             z-index: 1000;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s;
         }
 
         .floating-whatsapp:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
         }
 
+        /* Footer */
         footer {
-            margin-top: 24px;
+            background-color: var(--brand-dark-green);
+            color: var(--white);
+            padding: 40px 24px 20px 24px;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #E2F2E9;
+        }
+
+        .footer-col p, .footer-col a {
+            font-size: 13px;
+            color: #A3C4B3;
+            line-height: 1.8;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 12px;
-            font-family: 'Segoe UI', sans-serif;
-            color: #6B7C73;
+            color: #A3C4B3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .info-banner {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="profile-card">
-            <!-- Clickable Logo -->
-            <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="logo-link" onclick="trackClick('Logo', 'Instagram Profile')">
-                <img src="labelbyashee_logo.png" alt="labelbyashee Logo" class="logo-image">
-            </a>
-
-            <h1>labelbyashee</h1>
-            <p class="subtitle">Premium Kurtis, Co-Ord Sets & Ethnic Wear</p>
-
-            <!-- Store Location Address Snippet -->
-            <div class="location-info">
-                📍 <strong>Store Location:</strong><br>
-                C-103, 1st Floor, City Centre 1, Near Idgah Circle, Prem Darwaza, Dariyapur, Ahmedabad - 380016
-            </div>
-
-            <div class="links-group">
-                <!-- 1. Meesho Store Button -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn btn-meesho" onclick="trackClick('Meesho Store', 'Catalog Link')">
-                    <span>🛍️ Shop Full Catalog on Meesho</span>
-                </a>
-
-                <!-- 2. Google Maps Location Button -->
-                <a href="https://www.google.com/maps/place/LABEL+BY+ASHEE+-+ANSH+MANUFACTURERS/@23.038499,72.5945678,17z/data=!3m1!4b1!4m6!3m5!1s0x395e85995eee03af:0x110a452e379d03d3!8m2!3d23.0384941!4d72.5971427!16s%2Fg%2F11n_xx7pdr?entry=ttu" target="_blank" class="btn btn-maps" onclick="trackClick('Google Maps', 'View Location')">
-                    <span>📍 Visit Store on Google Maps</span>
-                </a>
-
-                <!-- 3. WhatsApp Chat Button -->
-                <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20labelbyashee%20collection." target="_blank" class="btn btn-whatsapp" onclick="trackClick('WhatsApp Chat', 'Direct Contact')">
-                    <span>💬 Chat on WhatsApp</span>
-                </a>
-
-                <!-- 4. Instagram Profile Button -->
-                <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="btn btn-instagram" onclick="trackClick('Instagram Profile', 'Social Follow')">
-                    <span>📷 Follow on Instagram (@labelbyashee)</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- FEATURED MEESHO PRODUCTS SECTION                          -->
-        <!-- Replace the 'href' values with your exact Meesho product URLs -->
-        <!-- Replace 'product1.jpg' with your product image file names  -->
-        <!-- ========================================================= -->
-        <div class="products-section">
-            <h2 class="section-title">✨ Featured Collections</h2>
-            <div class="product-grid">
-                
-                <!-- Product 1 -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="product-card" onclick="trackClick('Product Click', 'Festive Kurti Set')">
-                    <img src="product1.jpg" alt="Festive Printed Kurti Set" class="product-img" onerror="this.src='https://via.placeholder.com/200x200?text=Kurti+Set';">
-                    <div class="product-details">
-                        <div class="product-title">Designer Festive Printed Kurti Set</div>
-                        <div class="product-price">₹499 onwards</div>
-                        <div class="buy-now-btn">Buy on Meesho</div>
-                    </div>
-                </a>
-
-                <!-- Product 2 -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="product-card" onclick="trackClick('Product Click', 'Ethnic Co-Ord Set')">
-                    <img src="product2.jpg" alt="Ethnic Co-Ord Set" class="product-img" onerror="this.src='https://via.placeholder.com/200x200?text=Co-Ord+Set';">
-                    <div class="product-details">
-                        <div class="product-title">Trendy Ethnic Co-Ord Set</div>
-                        <div class="product-price">₹599 onwards</div>
-                        <div class="buy-now-btn">Buy on Meesho</div>
-                    </div>
-                </a>
-
-                <!-- Product 3 -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="product-card" onclick="trackClick('Product Click', 'Cotton Daily Wear')">
-                    <img src="product3.jpg" alt="Cotton Daily Wear Kurti" class="product-img" onerror="this.src='https://via.placeholder.com/200x200?text=Cotton+Kurti';">
-                    <div class="product-details">
-                        <div class="product-title">Pure Cotton Straight Kurti</div>
-                        <div class="product-price">₹399 onwards</div>
-                        <div class="buy-now-btn">Buy on Meesho</div>
-                    </div>
-                </a>
-
-                <!-- Product 4 -->
-                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="product-card" onclick="trackClick('Product Click', 'Party Wear Anarkali')">
-                    <img src="product4.jpg" alt="Party Wear Anarkali Suit" class="product-img" onerror="this.src='https://via.placeholder.com/200x200?text=Anarkali+Suit';">
-                    <div class="product-details">
-                        <div class="product-title">Embroidered Anarkali Dress</div>
-                        <div class="product-price">₹799 onwards</div>
-                        <div class="buy-now-btn">Buy on Meesho</div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-
-        <div class="categories">
-            <div class="cat-card">✨ Festive Kurtis</div>
-            <div class="cat-card">💃 Trendy Co-Ords</div>
-            <div class="cat-card">🌸 Daily Cotton Wear</div>
-            <div class="cat-card">🚚 Free Delivery</div>
-        </div>
+    <!-- Top Announcement -->
+    <div class="announcement-bar">
+        ✨ FREE SHIPPING ON ALL MEESHO ORDERS • DIRECT FACTORY RATES ✨
     </div>
 
-    <!-- Floating WhatsApp Quick-Action Badge -->
-    <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20labelbyashee%20collection." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp" onclick="trackClick('WhatsApp Floating', 'Quick Chat')">
+    <!-- Navigation Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="brand-logo-container">
+                <img src="labelbyashee_logo.png" alt="labelbyashee" class="brand-logo" onerror="this.onerror=null; this.src='https://via.placeholder.com/100?text=Logo';">
+                <span class="brand-title">labelbyashee</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#featured">Featured Wear</a></li>
+                    <li><a href="#store">Store Location</a></li>
+                    <li><a href="https://www.instagram.com/labelbyashee/" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20labelbyashee%20collection." target="_blank" class="nav-btn nav-btn-green">
+                    💬 WhatsApp
+                </a>
+                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="nav-btn nav-btn-terracotta">
+                    🛍️ Catalog
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Ethnic Wear & Festive Collections</h1>
+            <p>Explore exclusive Jaipur-style Kurtis, elegant Co-Ord sets, and cotton daily wear curated directly from our manufacturing unit.</p>
+            <div class="hero-buttons">
+                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn-large nav-btn-terracotta">Shop Full Store on Meesho</a>
+                <a href="https://www.instagram.com/labelbyashee/" target="_blank" class="btn-large nav-btn-green">Follow on Instagram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="main-container">
+
+        <!-- Categories Section -->
+        <div class="section-header" id="collections">
+            <h2>Shop By Category</h2>
+            <p>Handcrafted designs created for every occasion</p>
+        </div>
+
+        <div class="category-grid">
+            <div class="category-card">✨ Festive Kurti Sets</div>
+            <div class="category-card">💃 Trendy Co-Ords</div>
+            <div class="category-card">🌸 Cotton Daily Wear</div>
+            <div class="category-card">👑 Anarkali Suits</div>
+        </div>
+
+        <!-- Featured Products Grid Section -->
+        <div class="section-header" id="featured">
+            <h2>Featured Collections</h2>
+            <p>Click any product to view details and buy directly on Meesho</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="product1.jpg" alt="Designer Festive Printed Kurti Set" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=Kurti+Set';">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Designer Festive Printed Kurti Set</div>
+                    <div class="product-price">₹499 onwards</div>
+                    <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn-buy" onclick="trackClick('Product Click', 'Festive Kurti Set')">Buy on Meesho</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <span class="product-badge">Trending</span>
+                    <img src="product2.jpg" alt="Trendy Ethnic Co-Ord Set" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=Co-Ord+Set';">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Trendy Ethnic Co-Ord Set</div>
+                    <div class="product-price">₹599 onwards</div>
+                    <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn-buy" onclick="trackClick('Product Click', 'Ethnic Co-Ord Set')">Buy on Meesho</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="product3.jpg" alt="Pure Cotton Straight Kurti" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=Cotton+Kurti';">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Pure Cotton Straight Kurti</div>
+                    <div class="product-price">₹399 onwards</div>
+                    <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn-buy" onclick="trackClick('Product Click', 'Cotton Straight Kurti')">Buy on Meesho</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <span class="product-badge">New</span>
+                    <img src="product4.jpg" alt="Embroidered Anarkali Dress" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=Anarkali+Dress';">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Embroidered Anarkali Dress</div>
+                    <div class="product-price">₹799 onwards</div>
+                    <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank" class="btn-buy" onclick="trackClick('Product Click', 'Anarkali Dress')">Buy on Meesho</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Store Location Banner -->
+        <div class="info-banner" id="store">
+            <div class="info-text">
+                <h3>Visit Our Physical Outlet</h3>
+                <p>📍 <strong>C-103, 1st Floor, City Centre 1</strong>, Near Idgah Circle, Prem Darwaza, Dariyapur, Ahmedabad - 380016</p>
+            </div>
+            <a href="https://www.google.com/maps/place/LABEL+BY+ASHEE+-+ANSH+MANUFACTURERS/@23.038499,72.5945678,17z/data=!3m1!4b1!4m6!3m5!1s0x395e85995eee03af:0x110a452e379d03d3!8m2!3d23.0384941!4d72.5971427!16s%2Fg%2F11n_xx7pdr?entry=ttu" target="_blank" class="btn-large nav-btn-green">
+                📍 Get Directions on Maps
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918867642517?text=Hi!%20I%20have%20an%20inquiry%20about%20labelbyashee%20collection." target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
         💬
     </a>
 
+    <!-- Footer -->
     <footer>
-        © labelbyashee • Official Storefront Link
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>labelbyashee</h4>
+                <p>Ansh Manufacturers flagship store bringing premium ethnic wear, kurtis, and co-ord sets directly to customers.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="https://www.meesho.com/ANSHMANUFACTURERS?ms=2" target="_blank">Meesho Store</a>
+                <a href="https://www.instagram.com/labelbyashee/" target="_blank">Instagram Profile</a>
+                <a href="https://wa.me/918867642517" target="_blank">WhatsApp Inquiry</a>
+            </div>
+            <div class="footer-col">
+                <h4>Store Location</h4>
+                <p>C-103, 1st Floor, City Centre 1, Near Idgah Circle, Dariyapur, Ahmedabad - 380016</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 labelbyashee • Ansh Manufacturers. All Rights Reserved.
+        </div>
     </footer>
 
-    <!-- Helper function to push event data to GA4 and Meta Pixel on link click -->
+    <!-- Analytics Tracking Script -->
     <script>
       function trackClick(channelName, label) {
         if (typeof gtag === 'function') {
